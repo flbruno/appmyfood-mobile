@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+
+.image-background-login {
+    background: url('../img/login-background2.jpg') repeat center;
+}
+
+.image-background-register {
+    background: url('../img/cadastro-Background.jpg') no-repeat center;
+}
+
+.image-register-user-uploader {
+    background: url('../img/upload-user-register.png') no-repeat center;
+}
+
+.login {
+    margin-top: 60%;
+    position: static;
+    padding: 5%; 
+}
+
+.item-input {
+    border-radius: 10px;
+}
+
+.registerUserView {
+    margin-top: 20%;
+    position: static;
+    padding: 3%; 
+}
+
+#novaConta{
+    font-size: 13px;
+    color: #000;
+    margin-left: 25%;
+}

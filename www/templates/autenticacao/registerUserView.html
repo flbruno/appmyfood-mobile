@@ -1,0 +1,19 @@
+<ion-view view-title="RegisterUser" class="image-background-register">
+    <ion-content >
+        <div class="registerUserView" >
+        <!--<div class="image-register-user-uploader">sdasdaasd</div>-->
+            <label class="item item-input ">
+                <input type="text" placeholder="Nome" ng-model="usuario.nameUser">
+            </label>
+            <br>
+            <label class="item item-input">
+                <input type="text" placeholder="Email" ng-model="usuario.emailUser">
+            </label>
+            <br>
+            <label class="item item-input">
+                <input type="password" placeholder="Senha" ng-model="usuario.senhaUser">
+            </label>
+            <button class="button button-block button-assertive" ng-click="registerUser()">Cadastrar</button>
+        </div><br>
+    </ion-content>
+</ion-view>

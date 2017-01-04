@@ -1,0 +1,18 @@
+<ion-nav-view title="" hide-back-button="true" class="image-background-login">
+    <ion-content>
+        <div class="login">
+            <form ng-submit="doLogin()">
+                <label class="item item-input">
+                    <input type="text" placeholder="Usuario" ng-model="loginData.username">
+                </label>
+                <br>
+                <label class="item item-input">
+                    <input type="password" placeholder="Senha" ng-model="loginData.password">
+                </label>
+                <button class="button button-block button-assertive" type="submit">Logar</button>
+            </form>
+            <a id="novaConta" class="button button-clear button-assertive" type="submit" ng-href="#/cadastroUser">Registrar uma conta</a>
+        </div>
+
+    </ion-content>
+</ion-nav-view>
