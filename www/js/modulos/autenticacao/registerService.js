@@ -1,9 +1,11 @@
 angular.module('autenticacao').service('CadastroLoginService', [
-    '$http',  
-    function CadastroLoginService($http, $state, $ionicPopup) {
+    '$http',
+    function CadastroLoginService($http) {
+
+        var URL_BASE = "http://localhost:8088";
 
         CadastroLoginService.recuperaDadosServidor = function () {
-            var URL_BASE = "http://localhost:8088";
+
             $http({
                 method: 'GET',
                 url: URL_BASE + '/cadastro/food',
@@ -16,21 +18,24 @@ angular.module('autenticacao').service('CadastroLoginService', [
             });
         };
 
-        CadastroLoginService.inputRegisterUser = function (user){
-            var URL_BASE = "http://localhost:8088";
-            $http({
+
+        CadastroLoginService.inputRegisterUser = function (user) {
+            return $http({
                 method: 'POST',
                 url: URL_BASE + '/autenticacao/cadastro/usuario',
                 contentType: 'application/json; charset=utf-8',
                 data: user
-            }).then(function success(response) {
+            }).success(function (data, status) {
+                CadastroLoginService.data = data;
+                CadastroLoginService.status = status;
 
-                return response.data;
-            }, function error(response,$scope) {
-                $scope.showAlert();
-                console.log(response);
+            }).error(function (data, status) {
+                CadastroLoginService.status = status;
             });
         };
+
+
+
         return CadastroLoginService;
     }]);
 

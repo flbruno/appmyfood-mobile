@@ -40,6 +40,17 @@ angular.module('starter', ['ionic', 'starter.controllers', 'food', 'autenticacao
                         templateUrl: 'templates/autenticacao/registerUserView.html',
                         controller: 'CadastroLoginCtrl'
                     })
+                    
+                     .state('app.login', {
+                        url: '/applogin',
+                         views: {
+                            'menuContent': {
+                                 templateUrl: 'templates/login.html',
+                                 controller: 'LoginCtrl'
+                            }
+                        }
+                        
+                    })
                     .state('app.browse', {
                         url: '/browse',
                         views: {
