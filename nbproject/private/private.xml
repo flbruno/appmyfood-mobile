@@ -4,14 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="App">
             <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/js/modulos/autenticacao/registerController.js</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/bower.json</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/js/modulos/autenticacao/loginController.js</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/js/modulos/autenticacao/autenticationModule.js</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/templates/login.html</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/templates/autenticacao/registerUserView.html</file>
             <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/js/modulos/autenticacao/registerService.js</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/config.xml</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/js/app.js</file>
         </group>
     </open-files>
 </project-private>

@@ -1,4 +1,4 @@
-angular.module('autenticacao').controller('CadastroLoginCtrl', function ($scope, $http, $state, CadastroLoginService, $stateParams) {
+angular.module('autenticacao').controller('CadastroLoginCtrl', function ($scope, $state, CadastroLoginService, $ionicPopup) {
 
     $scope.usuario = {};
     $scope.usuario.nameUser = "";
@@ -10,12 +10,45 @@ angular.module('autenticacao').controller('CadastroLoginCtrl', function ($scope,
         CadastroLoginService.inputRegisterUser($scope.usuario).then(function () {
 
             $scope.usuario = CadastroLoginService.data;
-            if(CadastroLoginService.status === 200){
-                $state.go("login");
+            if (CadastroLoginService.status === 200) {
+                $scope.showAlertRegisterSucess();
+                
+            } else {
+                $scope.showAlertRegisterError();
             }
         });
+    };
 
+    $scope.showAlertRegisterSucess = function () {
+        var alertPopup = $ionicPopup.alert({
+            title: 'Usuario Cadastrado com sucesso!',
+            buttons: [
+                {
+                    text: '<b>Ok</b>',
+                    type: 'button-positive'
+                }
+            ]
+        });
 
+        alertPopup.then(function (res) {
+            $state.go("login");
+        });
+    };
+
+    $scope.showAlertRegisterError = function () {
+        var alertPopup = $ionicPopup.alert({
+            title: 'Problema ao cadastrar o usuario!',
+            template: 'Favor realizar o cadastro novamente.',
+            buttons: [
+                {
+                    text: '<b>Ok</b>',
+                    type: 'button-assertive'
+                }
+            ]
+        });
+
+        alertPopup.then(function (res) {
+        });
     };
 });
 
