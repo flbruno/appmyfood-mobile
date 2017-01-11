@@ -3,7 +3,6 @@ angular.module('autenticacao').controller('LoginCtrl', function ($scope, $http, 
 
     $scope.doLogin = function () {
         
-       if ()
         $state.go('app.principal');
         
        
@@ -20,21 +19,21 @@ angular.module('autenticacao').controller('LoginCtrl', function ($scope, $http, 
 
     $scope.init();
 
-    $scope.showAlertRegisterError = function () {
-        var alertPopup = $ionicPopup.alert({
-            title: 'Login Inválido!',
-            template: 'Por favor, tente novamente',
-            buttons: [
-                {
-                    text: '<b>Ok</b>',
-                    type: 'button-assertive'
-                }
-            ]
-        });
-
-        alertPopup.then(function (res) {
-        });
-    };
+//    $scope.showAlertRegisterError = function () {
+//        var alertPopup = $ionicPopup.alert({
+//            title: 'Login Inválido!',
+//            template: 'Por favor, tente novamente',
+//            buttons: [
+//                {
+//                    text: '<b>Ok</b>',
+//                    type: 'button-assertive'
+//                }
+//            ]
+//        });
+//
+//        alertPopup.then(function (res) {
+//        });
+//    };
 });
 
 
