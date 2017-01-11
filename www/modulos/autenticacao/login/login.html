@@ -1,0 +1,22 @@
+<ion-nav-view title="" hide-back-button="true" class="image-background-login">
+    <ion-content ng-controller="LoginCtrl">
+        <div class="login">
+            <form ng-submit="doLogin()">
+                
+                <label class="item item-input">
+                    <input type="text" placeholder="Usuario" ng-model="usuario.emailUser">
+                     <i class="icon icon ion-android-person icon-menu"></i>
+                </label>
+                <br>
+                <label class="item item-input">
+                    <input type="password" placeholder="Senha" ng-model="usuario.senhaUser">
+                    <i class="icon icon ion-android-lock icon-menu color-salemonitor"></i>
+                </label>
+                <button class="button button-block button-assertive" type="submit">Logar</button>
+                
+            </form>
+            <div class="text-center" style="font-size: small; justify-content: center; align-items: flex-end;">
+                Ainda não é cadastrado? <a id="novaConta" type="submit" ng-href="#/cadastroUser"> Cadastre-se</a></div>
+        </div>
+    </ion-content>
+</ion-nav-view>

@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'food', 'autenticacao'])
+angular.module('starter', ['ionic', 'starter.controllers', 'principal', 'autenticacao'])
 
         .run(function ($ionicPlatform) {
             $ionicPlatform.ready(function () {
@@ -26,7 +26,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'food', 'autenticacao
             $stateProvider
                     .state('login', {
                         url: '/login',
-                        templateUrl: 'templates/login.html',
+                        templateUrl: 'modulos/autenticacao/login/login.html',
                         controller: 'LoginCtrl'
                     })
                     .state('app', {
@@ -37,15 +37,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'food', 'autenticacao
                     })
                     .state('cadastroUser', {
                         url: '/cadastroUser',
-                        templateUrl: 'templates/autenticacao/registerUserView.html',
+                        templateUrl: 'modulos/autenticacao/registro/registerUserView.html',
                         controller: 'CadastroLoginCtrl'
                     })
+                    
                     
                      .state('app.login', {
                         url: '/applogin',
                          views: {
                             'menuContent': {
-                                 templateUrl: 'templates/login.html',
+                                 templateUrl: 'modulos/autenticacao/login/login.html',
                                  controller: 'LoginCtrl'
                             }
                         }
@@ -59,12 +60,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'food', 'autenticacao
                             }
                         }
                     })
-                    .state('app.playlists', {
-                        url: '/playlists',
+                    .state('app.principal', {
+                        url: '/principal',
                         views: {
                             'menuContent': {
-                                templateUrl: 'templates/playlists.html',
-                                controller: 'PlaylistsCtrl'
+                                templateUrl: 'modulos/principal/principal.view.html',
+                                controller: 'PrincipalCtrl'
                             }
                         }
                     })
