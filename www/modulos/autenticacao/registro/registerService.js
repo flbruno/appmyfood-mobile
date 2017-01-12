@@ -19,7 +19,7 @@ angular.module('autenticacao').service('CadastroLoginService', [
         };
 
 
-        CadastroLoginService.inputRegisterUser = function (user) {
+        CadastroLoginService.   inputRegisterUser = function (user) {
             return $http({
                 method: 'POST',
                 url: URL_BASE + '/autenticacao/cadastro/usuario',
