@@ -3,23 +3,8 @@ angular.module('autenticacao').service('CadastroLoginService', [
     function CadastroLoginService($http) {
 
         var URL_BASE = "http://localhost:8088";
-
-        CadastroLoginService.recuperaDadosServidor = function () {
-
-            $http({
-                method: 'GET',
-                url: URL_BASE + '/cadastro/food',
-                contentType: 'application/json; charset=utf-8'
-
-            }).then(function success(response) {
-                return response.data;
-            }, function error(response) {
-                console.log(response);
-            });
-        };
-
-
-        CadastroLoginService.   inputRegisterUser = function (user) {
+        
+        CadastroLoginService.inputRegisterUser = function (user) {
             return $http({
                 method: 'POST',
                 url: URL_BASE + '/autenticacao/cadastro/usuario',
@@ -33,8 +18,6 @@ angular.module('autenticacao').service('CadastroLoginService', [
                 CadastroLoginService.status = status;
             });
         };
-
-
 
         return CadastroLoginService;
     }]);

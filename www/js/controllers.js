@@ -1,5 +1,11 @@
 angular.module('starter.controllers', [])
-        .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $state) {
+        .controller('AppCtrl', function ($scope, $ionicModal, $timeout, $state, LoginService) {
+          
+            $scope.usuario = LoginService.getUserLogged();
+    
+    
+             
+            
         })
 
 
