@@ -31,7 +31,7 @@ angular.module('autenticacao').controller('CadastroLoginCtrl', function ($scope,
         });
 
         alertPopup.then(function (res) {
-            $state.go("login");
+            $state.go("login", {}, {reload: true, notify: true, inherit: false});
         });
     };
 

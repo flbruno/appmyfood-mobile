@@ -5,29 +5,26 @@ angular.module('autenticacao').factory('LoginService', [
         var URL_BASE = "http://localhost:8088";
         var usuario;
 
-        LoginService.authentication = function (email, senha) {
+        LoginService.authentication = function (usuario) {
 
             return $http({
                 method: 'POST',
-                url: URL_BASE + '/autenticacao/cadastro/getdadosuser' ,
+                url: URL_BASE + '/autenticacao/login',
                 contentType: 'application/json; charset=utf-8',
-                data: {email: email, senha: senha}
-                
+                data: usuario
+
             }).success(function (data, status) {
-                LoginService.usuario = data[0];
-                usuario = LoginService.usuario;
+                LoginService.usuario = data;
+                LoginService.status = status;
 
             }).error(function (data, status) {
                 LoginService.status = status;
             });
         };
-        
-        LoginService.getUserLogged = function(){
+
+        LoginService.getUserLogged = function () {
             return usuario;
         };
-        
-       
-        
 
         return LoginService;
     }]);
