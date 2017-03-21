@@ -17,7 +17,7 @@ angular.module('autenticacao').factory('LoginService', [
                 LoginService.usuario = data;
                 LoginService.status = status;
 
-            }).error(function (data, status) {
+            }).error(function (status) {
                 LoginService.status = status;
             });
         };

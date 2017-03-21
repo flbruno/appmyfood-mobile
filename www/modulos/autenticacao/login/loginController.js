@@ -1,27 +1,32 @@
-angular.module('autenticacao').controller('LoginCtrl', function ($scope, $http, $state, LoginService, CadastroLoginService) {
+angular.module('autenticacao').controller('LoginCtrl', function ($scope, $ionicPopup, $state, LoginService, CadastroLoginService) {
 
     $scope.usuario = {};
+    var userLogin = CadastroLoginService.data;
     $scope.init = function () {
-        
-        //Apos registro de conta já traz dados do login
-        var usuario = CadastroLoginService.data;
-        if (usuario !== null && usuario !== undefined) {
-            $scope.usuario.emailUser = usuario.emailUser;
+        //Apos registro de conta o name 
+        //do usuario ja esta carregado
+        if (userLogin !== null && userLogin !== undefined) {
+            $scope.usuario.emailUser = userLogin.emailUser;
         }
     };
-    
     $scope.init();
-    
-     $scope.authentication = function () {
-        LoginService.authentication($scope.usuario).then(function () {
-           
-            if (LoginService.status === 200) {   
-                $state.go('app.principal');
-               
-            }else{
-                 $scope.showAlertAutenticationError();
-            }
-        });
+
+    $scope.authentication = function () {
+
+        if ($scope.usuario.senhaUser !== undefined || $scope.usuario.emailUser !== undefined) {
+
+            LoginService.authentication($scope.usuario).then(function () {
+
+                if (LoginService.status === 200) {
+                    $state.go('app.principal');
+
+                } else {
+                    $scope.showAlertAutenticationError();
+                }
+            });
+        } else {
+            $scope.showAlertAutenticationError();
+        }
     };
 
     $scope.showAlertAutenticationError = function () {
