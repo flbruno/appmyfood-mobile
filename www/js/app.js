@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'principal', 'autenticacao'])
+angular.module('starter', ['ionic', 'starter.controllers', 'principal', 'autenticacao', 'favorites'])
 
         .run(function ($ionicPlatform) {
             $ionicPlatform.ready(function () {
@@ -31,17 +31,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'principal', 'autenti
                         templateUrl: 'modulos/autenticacao/registro/registerUserView.html',
                         controller: 'CadastroLoginCtrl'
                     })
-                    
-                    
-                     .state('app.login', {
-                        url: '/applogin',
-                         views: {
+                    .state('app.favorites', {
+                        url: '/favorites',
+                        views: {
                             'menuContent': {
-                                 templateUrl: 'modulos/autenticacao/login/login.html',
-                                 controller: 'LoginCtrl'
+                                templateUrl: 'modulos/favorites/FavoritesView.html'
                             }
                         }
-                        
+                    })
+
+                    .state('app.login', {
+                        url: '/applogin',
+                        views: {
+                            'menuContent': {
+                                templateUrl: 'modulos/autenticacao/login/login.html',
+                                controller: 'LoginCtrl'
+                            }
+                        }
+
                     })
                     .state('app.browse', {
                         url: '/browse',
