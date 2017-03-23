@@ -18,7 +18,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'principal', 'autenti
                     .state('login', {
                         url: '/login',
                         templateUrl: 'modulos/autenticacao/login/login.html',
-                        controller: 'LoginCtrl'
+                        controller: 'LoginCtrl',
+                        cache: false
                     })
                     .state('app', {
                         url: '/app',
