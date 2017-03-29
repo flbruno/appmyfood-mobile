@@ -1,11 +1,22 @@
-<ion-view view-title="Tela Principal">
-  <ion-content>
-    <ion-list>
-      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
-        {{playlist.title}}
-      </ion-item>
-    </ion-list>
-      
- 
-  </ion-content>
-</ion-view>
+<ion-view view-title="Home" class="imageBackgroundHome">
+    <ion-content>
+        <!--        <ion-list>
+                    <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
+                        {{playlist.title}}
+                    </ion-item>
+                </ion-list>-->
+        <div class="row" ng-controller="PrincipalCtrl">
+            <div id="homeButtonsPositionDiv" >
+                <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-search button-dark">Pesquisar</button></div>
+            <div id="homeButtonsPositionDiv">
+                <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-star button-dark" ng-click="doFavorites()">Favoritos</button></div>
+        </div>
+
+        <div class="row" ng-controller="PrincipalCtrl">
+            <div id="homeButtonsPositionDiv" >
+                <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-android-person button-dark">Eventos</button></div>
+            <div id="homeButtonsPositionDiv">
+                <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-android-lock button-dark">Teste</button></div>
+        </div>
+    </ion-content>
+</ion-view> 

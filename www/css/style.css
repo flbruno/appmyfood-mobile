@@ -12,6 +12,43 @@
     background: url('../img/upload-user-register.png') no-repeat center;
 }
 
+.imageBackgroundHome {
+    background: url('../img/backgroundHome.jpg') no-repeat center;
+    background-size:120% 120%;
+
+}
+
+.imageBackgroundRegister {
+    background: url('../img/backgroundRegister.jpg') no-repeat center;
+    background-size:100% 100%
+}
+
+/*.imageBackgroundhHomeSearch {
+    background: url('../img/imageButtonSearch.png') no-repeat center;
+    background-size:30% 30%
+}
+
+.imageBackgroundhHomeGeo {
+    background: url('../img/imageButtonGeo.jpg') no-repeat center;
+    background-size:20% 100%;
+}*/
+
+#homeButtonsPositionDiv {   
+    background-size:100% 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 10%;
+}
+
+#buttonPositionDiv {
+    color: #F5F5F5;
+    /*    background-color:#cc8800;
+        background-image: linear-gradient(to bottom, rgba(255,255,255,.1), rgba(255,255,255,.4), rgba(255,255,255,0), rgba(255,255,255,.4));*/
+    background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#DEB887));
+    background: -moz-linear-gradient(top, #CCCCCC, #DEB887);
+    width: 130%;
+}
+
 .login {
     margin-top: 100%;
     background-color: #f5f5f5;

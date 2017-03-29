@@ -2,7 +2,7 @@ angular.module('autenticacao').service('CadastroLoginService', [
     '$http',
     function CadastroLoginService($http) {
 
-        var URL_BASE = "http://localhost:8088";
+        var URL_BASE = "http:/172.16.50.118:8088";
         
         CadastroLoginService.inputRegisterUser = function (user) {
             return $http({
