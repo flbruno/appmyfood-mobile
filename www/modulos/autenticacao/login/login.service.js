@@ -2,7 +2,7 @@ angular.module('autenticacao').factory('LoginService', [
     '$http',
     function LoginService($http) {
 
-        var URL_BASE = "http:/172.16.50.118:8088";
+        var URL_BASE = "http://localhost:8088";
         var usuario;
 
         LoginService.authentication = function (usuario) {

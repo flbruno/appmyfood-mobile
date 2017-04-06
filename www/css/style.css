@@ -12,7 +12,7 @@
     background: url('../img/upload-user-register.png') no-repeat center;
 }
 
-.imageBackgroundHome {
+#imageBackgroundHome {
     background: url('../img/backgroundHome.jpg') no-repeat center;
     background-size:120% 120%;
 
@@ -49,10 +49,11 @@
     width: 130%;
 }
 
-.login {
-    margin-top: 100%;
+#login {
+    margin-top: 70%;
+    position: fixed;
     background-color: #f5f5f5;
-    padding: 2%;
+    padding: 1%;
 }
 
 .item-input {

@@ -1,6 +1,6 @@
-<ion-nav-view title="" hide-back-button="true" class="image-background-login">
+<ion-nav-view title="" class="image-background-login">
     <ion-content ng-controller="LoginCtrl">
-        <div class="login">
+        <div class="row responsive-sm" >
             <form ng-submit="doLogin()">
 
                 <label class="item item-input">
@@ -15,7 +15,7 @@
                 <button class="button button-block button-assertive" ng-click="authentication()">Logar</button>
 
             </form>
-            <div class="text-center" style="font-size: small; justify-content: center; align-items: flex-end;">
+            <div class="text-center" style="font-size: small; justify-content: center; align-items: flex-end; color: #ffffff;">
                 Ainda não é cadastrado? <a id="novaConta" type="submit" ng-href="#/cadastroUser"> Cadastre-se</a></div>
         </div>
     </ion-content>

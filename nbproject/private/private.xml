@@ -3,14 +3,6 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="food"/>
-        <group name="App">
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/modulos/principal/principal.view.html</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/lib/ionic/css/ionic.css</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/index.html</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/css/style.css</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/modulos/autenticacao/login/loginController.js</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/templates/playlist.html</file>
-            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/modulos/favorites/FavoritesView.html</file>
-        </group>
+        <group name="App"/>
     </open-files>
 </project-private>

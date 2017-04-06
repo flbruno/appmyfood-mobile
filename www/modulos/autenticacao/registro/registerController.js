@@ -4,15 +4,22 @@ angular.module('autenticacao').controller('CadastroLoginCtrl', function ($scope,
     $scope.usuario.nameUser = "";
     $scope.usuario.emailUser = "";
     $scope.usuario.senhaUser = "";
+    $scope.usuario.confirmarSenhaUser = "";
 
     //Cadastrando o usuario no sistema
     $scope.registerUser = function () {
         CadastroLoginService.inputRegisterUser($scope.usuario).then(function () {
 
-            $scope.usuario = CadastroLoginService.data;
-            if (CadastroLoginService.status === 200) {
-                $scope.showAlertRegisterSucess();
+            if ($scope.validationRegisterUser()) {
+                $scope.usuario = CadastroLoginService.data;
                 
+                if (CadastroLoginService.status === 200) {
+                    $scope.showAlertRegisterSucess();
+
+                } else {
+                    $scope.showAlertRegisterError();
+                }
+
             } else {
                 $scope.showAlertRegisterError();
             }
@@ -49,6 +56,23 @@ angular.module('autenticacao').controller('CadastroLoginCtrl', function ($scope,
 
         alertPopup.then(function (res) {
         });
+    };
+
+    $scope.validationRegisterUser = function () {
+        var name = $scope.usuario.nameUser;
+        var email = $scope.usuario.emailUser;
+        var passwd = $scope.usuario.senhaUser;
+        var cfPasswd = $scope.usuario.confirmarSenhaUser;
+
+        if ((name === undefined || name === undefined || name.trim() === "")
+                || (email === undefined || email === undefined || email.trim() === "")
+                || (passwd === undefined || passwd === undefined || passwd.trim() === "")
+                || (cfPasswd === undefined || cfPasswd === undefined || cfPasswd.trim() === "")) {
+            return false;
+
+        } else {
+            return true;
+        }
     };
 });
 

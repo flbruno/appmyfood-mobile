@@ -13,8 +13,7 @@ angular.module('autenticacao').controller('LoginCtrl', function ($scope, $ionicP
 
     $scope.authentication = function () {
 
-        if ($scope.usuario.senhaUser !== undefined || $scope.usuario.emailUser !== undefined) {
-
+        if ($scope.validationAcessUserLogin()) {
             LoginService.authentication($scope.usuario).then(function () {
 
                 if (LoginService.status === 200) {
@@ -24,15 +23,19 @@ angular.module('autenticacao').controller('LoginCtrl', function ($scope, $ionicP
                     $scope.showAlertAutenticationError();
                 }
             });
+
         } else {
             $scope.showAlertAutenticationError();
         }
     };
 
     $scope.showAlertAutenticationError = function () {
+        var msg = !$scope.validationAcessUserLogin() ? 'Login Inválido!' : 'Usuário ou Senha estão Inválidos!';
+        var msgDet = 'Por favor, tente novamente';
+
         $ionicPopup.alert({
-            title: 'Login Inválido!',
-            template: 'Por favor, tente novamente',
+            title: msg,
+            template: msgDet,
             buttons: [
                 {
                     text: '<b>Ok</b>',
@@ -44,6 +47,20 @@ angular.module('autenticacao').controller('LoginCtrl', function ($scope, $ionicP
         alertPopup.then(function (res) {
         });
     };
+
+    $scope.validationAcessUserLogin = function () {
+        var user = $scope.usuario.emailUser;
+        var passwd = $scope.usuario.senhaUser;
+
+        if ((user === undefined || user === undefined || user.trim() === "") ||
+                (passwd === undefined || passwd === undefined || passwd.trim() === "")) {
+            return false;
+
+        } else {
+            return true;
+        }
+    };
+
 });
 
 
