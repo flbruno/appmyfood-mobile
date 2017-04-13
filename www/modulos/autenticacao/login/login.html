@@ -1,6 +1,11 @@
 <ion-nav-view title="" class="image-background-login">
     <ion-content ng-controller="LoginCtrl">
         <div class="row responsive-sm" >
+            <!--TODO: Colocar o LOGO de inicio do aplicativo-->
+            
+            <div id = "welcomeApp" class="row" ng-controller="PrincipalCtrl">
+                Bem-vindo a Food Home<br>   Acesso sua conta:<br>
+            </div>
             <form ng-submit="doLogin()">
 
                 <label class="item item-input">

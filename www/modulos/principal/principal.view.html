@@ -5,18 +5,20 @@
                         {{playlist.title}}
                     </ion-item>
                 </ion-list>-->
+        <div id = "welcomeHome" class="row" ng-controller="PrincipalCtrl">
+            Olá, Bruno...<br>
+            Existe um novo jeito de pesquisar o melhor restaurante e o melhor preço.<br>
+            Compare o melhor preço dos restaurantes e salve os melhores em favoritos.            
+        </div>
         <div class="row" ng-controller="PrincipalCtrl">
-            <div id="homeButtonsPositionDiv" >
-                <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-search button-dark">Pesquisar</button></div>
-            <div id="homeButtonsPositionDiv">
-                <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-star button-dark" ng-click="doFavorites()">Favoritos</button></div>
+            <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-search button-dark">Pesquisar</button>
+        </div>
+        <div class="row" ng-controller="PrincipalCtrl">
+            <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-star button-dark" ng-click="doFavorites()">Favoritos</button>
         </div>
 
         <div class="row" ng-controller="PrincipalCtrl">
-            <div id="homeButtonsPositionDiv" >
-                <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-android-person button-dark">Eventos</button></div>
-            <div id="homeButtonsPositionDiv">
-                <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-android-lock button-dark">Teste</button></div>
+            <button id = "buttonPositionDiv" class="button button-outline button-large icon-left ion-android-person button-dark">Eventos</button>
         </div>
     </ion-content>
 </ion-view> 

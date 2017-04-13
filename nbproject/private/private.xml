@@ -3,6 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group name="food"/>
-        <group name="App"/>
+        <group name="App">
+            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/modulos/principal/principal.view.html</file>
+            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/modulos/autenticacao/login/login.html</file>
+            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/modulos/autenticacao/registro/registerUserView.html</file>
+            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/index.html</file>
+            <file>file:/home/bruno/Work/mobile/appmyfood-mobile/www/css/style.css</file>
+        </group>
     </open-files>
 </project-private>

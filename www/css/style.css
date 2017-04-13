@@ -47,14 +47,30 @@
     background: -webkit-gradient(linear, left top, left bottom, from(#CCCCCC), to(#DEB887));
     background: -moz-linear-gradient(top, #CCCCCC, #DEB887);
     width: 130%;
+    padding: 2%;
+    margin-top: 2%;
+    padding-top: 6%;
 }
 
 #login {
     margin-top: 70%;
-    position: fixed;
     background-color: #f5f5f5;
     padding: 1%;
 }
+
+#welcomeHome {
+    margin-top: 30%;
+    font-family: signboard;
+    font-size: 12px;
+}
+
+#welcomeApp {
+    margin-top: 30%;
+    font-family: tahoma;
+    font-size: 12px;
+    margin-bottom: 15%;
+}
+
 
 .item-input {
     border-radius: 10px;
