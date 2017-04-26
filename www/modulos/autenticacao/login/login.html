@@ -2,14 +2,14 @@
     <ion-content ng-controller="LoginCtrl">
 <!--        <div class="row responsive-sm" >-->
             <!--TODO: Colocar o LOGO de inicio do aplicativo-->
-            
-            <div class="row" style="font-size: 1.875em; justify-content: center; align-items: flex-end; color: #ffffff; margin-top: 30%; font-weight: bold;">
-                Bem-vindo a <br><br>Food Home<br>
+            <div class="row">
+                <img src="../img/login-background2.png" width="100%" style="padding: 5% 10% 7% 10%"/>
             </div>
-              <div class="row" style="font-size: 14px; align-items: flex-end; color: #ffffff; margin-top: 10%;font-weight: bold;" >
-                Acesso sua conta:
-            </div>
+           
             <form ng-submit="doLogin()">
+                  <div class="row" style="font-size: 12px; font-weight: bold; background-color: #f1f2f3;" >
+                Acesse sua conta:
+            </div>
                 <label class="item item-input">
                     <input type="text" placeholder="Usuario" ng-model="usuario.emailUser">
                     <i class="icon icon ion-android-person icon-menu"></i>
@@ -20,10 +20,11 @@
                     <i class="icon icon ion-android-lock icon-menu color-salemonitor"></i>
                 </label>
                 <button class="button button-block button-assertive" ng-click="authentication()">Logar</button>
+                 <div class="text-center" style="font-size: small; justify-content: center; align-items: flex-end;  background-color: #f1f2f3;">
+                Ainda não é cadastrado? <a id="novaConta" type="submit" ng-href="#/cadastroUser"> Cadastre-se</a></div>
 
             </form>
-            <div class="text-center" style="font-size: small; justify-content: center; align-items: flex-end; color: #ffffff;">
-                Ainda não é cadastrado? <a id="novaConta" type="submit" ng-href="#/cadastroUser"> Cadastre-se</a></div>
+           
         <!--</div>-->
     </ion-content>
 </ion-nav-view>

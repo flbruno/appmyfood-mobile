@@ -1,11 +1,12 @@
 /* Empty. Add your own CSS if you like */
 
 .image-background-login {
-    background: url('../img/login-background2.jpg') repeat center;
+    background: url('../img/backgroundLoginFixed.jpg');
+    margin-bottom: 10%;
 }
 
 .image-background-register {
-    background: url('../img/cadastro-Background.jpg') no-repeat center;
+    background: url('../img/login-background2.jpg') no-repeat center;
 }
 
 .image-register-user-uploader {
@@ -19,7 +20,7 @@
 }
 
 .imageBackgroundRegister {
-    background: url('../img/backgroundRegister.jpg') no-repeat center;
+    background: url('../img/login-background2.jpg') no-repeat center;
     background-size:100% 100%
 }
 
